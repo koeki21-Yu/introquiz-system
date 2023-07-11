@@ -6,7 +6,7 @@
 これを参考に作成しました。
 [広瀬先生のWebSoketSample](https://www.yatex.org/gitbucket/yuuji/WebSocketSample)
 
-[去年のイントロシステム](ssh://git@www.yatex.org:29418/HiroseLabo./2023-intro.git)
+[去年のイントロシステム](https://www.yatex.org/gitbucket/c1200274/tokko)
 ## 構想
 ### webpage
 
