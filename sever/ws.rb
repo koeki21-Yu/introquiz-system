@@ -20,6 +20,7 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
     ws_conn.send("うっす!")
     printf("%d guest(s)\n", clients.length)
   end
+  
   ws_conn.onmessage do |message|	# クライアントから文字列が来たとき
     p message
     resp = "誰かが「"+message+"」だってさ"

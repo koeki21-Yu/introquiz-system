@@ -2,17 +2,37 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="adomin.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="csv.min.js"></script>
+    <script type="text/javascript" src="adomin.js"></script>
+    <script type="text/javascript" src="audio.js"></script>
     <title>adomin</title>
 </head>
 <body>
-    <script src="adomin.js"></script>
-    <h1>Admin</h1>
-    <button onclick="playMusic()">Play</button>
-    <button onclick="stopMusic()">Stop</button>
+    <form>
+    <h1>メインページ</h1>
+
+    <h1 id="__問題__">問題1</h1>
+    <h2 id="__ジャンル__">J-POP</h2>
 
     <!-- 音楽ファイルの設定 -->
-    <audio id="music" src="music.mp3" loop></audio>
+    <audio id="__音楽__" controls src="" loop></audio>
+    <div>
+        <button type="button">Play</button>
+        <button type="button">Stop</button>
+    </div>
+<p id="__ヒント__" class="hidden">ヒント書く場所</p>
+<input type="button" value="ヒントの表示/非表示を切替える" onclick="changeDisplay();"/><br><br>
+
+<p id="__答え__" class="hidden">回答書く場所</p>
+<input type="button" value="答えの表示/非表示を切替える" onclick="changeDisplay2();"/><br><br>
+
+    </form>
+    <h1 id="innerHTMLtxt"/></h1>
+    <button id="release">はやおし順番のリセット</button><br><br>
+    <button type="button" id="left">前の問題</button>
+    <button type="button" id="right">次の問題</button>
 </body>
 </html>
