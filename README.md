@@ -3,6 +3,9 @@
 
 2023年のイントロクイズ作成リポジトリです。
 
+これを参考に作成しました。
+[広瀬先生のWebSoketSample](https://www.yatex.org/gitbucket/yuuji/WebSocketSample)
+
 ## 構想
 ### webpage
 
