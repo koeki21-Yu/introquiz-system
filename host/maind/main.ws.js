@@ -1,7 +1,7 @@
 function intro(){
     var coment = document.getElementById("innerHTMLtxt");
+    var ws;
     function initConn(){    //接続確認
-        var ws;
         try{
             ws = new WebSocket("ws://localhost:8888/")
             ws.onopen = function() {};		// Nothing special

@@ -9,6 +9,7 @@
 require 'em-websocket'
 require 'pp'
 require 'json'
+require 'set'
 
 PORT = 8888
 connnections = []
@@ -21,9 +22,11 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
   # クライアント接続がある度にその情報が ws_conn に入って来る
   ws_conn.onopen do		# そのクライアントが接続開始してきたとき
     clients << ws_conn		# クライアントを集合に追加
+    ws_conn.send("うっす!")
+    printf("%d guest(s)\n", clients.length)
   end
   
-  ws.onmessage do |message|	# クライアントから文字列が来たとき
+  ws_conn.onmessage do |message|	# クライアントから文字列が来たとき
     p message
     if messge == "リセットお願い" then
       hash = Hash.new
