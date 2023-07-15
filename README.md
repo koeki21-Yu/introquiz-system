@@ -13,7 +13,7 @@
 
 
 ### maindirectory
-[main.html](../../../2023-intro/pages/host/maind/main.html)
+[main.html](../2023-intro/../../2023-intro/pages/host/maind/main.html)
 
 ### サーバー側
 [ws.rb](../../../2023-intro/blob/master/sever/ws.rb)
