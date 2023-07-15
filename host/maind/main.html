@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <script>
-      function updateName() {
-        var nameInput = document.getElementById("name");
-        var name = nameInput.value;
-        
-        var nameText = document.getElementById("nameText");
-        nameText.innerHTML = name;
-      }
-      
-      function selectTeam() {
-        var teamSelect = document.getElementById("team");
-        var selectedTeam = teamSelect.options[teamSelect.selectedIndex].text;
-        
-        var teamText = document.getElementById("teamText");
-        teamText.innerHTML = selectedTeam;
-      }
-    </script>
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,11 +11,11 @@
   </head>
   <body>
     <form>
-    <label for="name">Name:</label>
+    <label for="name">名前を入力して「名前決定ボタン」を押してください</label>
     <input type="text" id="name" name="name" required>
-    <button type="button" id="nameBtn" onClick="updateName()">Update Name</button>
+    <button type="button" id="nameBtn" onClick="updateName()">名前決定ボタン</button>
         
-    <label for="team">Team:</label>
+    <label for="team">班を選択して「チーム決定ボタン」を押してください</label>
       <select name="team" id="team">
         <option value="1">1班</option>
         <option value="2">2班</option>
