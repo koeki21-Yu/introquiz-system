@@ -9,11 +9,11 @@
 [去年のイントロシステム](https://www.yatex.org/gitbucket/c1200274/tokko)
 ## webpage
 ### admindirectory
-[admin.html](../pges/host/admind/admin.html)
+[admin.html](../../../2023-intro/pges/host/admind/admin.html)
 
 
 ### maindirectory
-[main.html](../pages/host/maind/main.html)
+[main.html](../../../2023-intro/pages/host/maind/main.html)
 
-### サーバー側 
-[ws.rb](../blob/master/sever/ws.rb)
+### サーバー側
+[ws.rb](../../../2023-intro/blob/master/sever/ws.rb)
