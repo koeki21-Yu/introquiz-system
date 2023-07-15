@@ -7,19 +7,13 @@
 [広瀬先生のWebSoketSample](https://www.yatex.org/gitbucket/yuuji/WebSocketSample)
 
 [去年のイントロシステム](https://www.yatex.org/gitbucket/c1200274/tokko)
-## 構想
-### webpage
+## webpage
+### admindirectory
+[admin.html](../pges/host/admind/admin.html)
 
-[host.html]()
 
-[home.html]()
-
-[room1~6.html]()
-
-### webgage側
-
-[ws.js]()
+### maindirectory
+[main.html](../pages/host/maind/main.html)
 
 ### サーバー側 
-
-[ws.rb]()
+[ws.rb](../blob/master/sever/ws.rb)
