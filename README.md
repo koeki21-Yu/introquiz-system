@@ -9,7 +9,7 @@
 [去年のイントロシステム](https://www.yatex.org/gitbucket/c1200274/tokko)
 ## webpage
 ### admindirectory
-[admin.html](../../../2023-intro/pges/host/admind/admin.html)
+[admin.html](../../../2023-intro/pages/host/admind/admin.html)
 
 
 ### maindirectory
