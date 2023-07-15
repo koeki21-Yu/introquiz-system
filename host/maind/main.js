@@ -14,3 +14,4 @@ function selectTeam() {
     var teamText = document.getElementById("teamText");
     teamText.innerHTML = selectedTeam;
 }
+

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <script type="text/javascript" src="main.ws.js" charset="utf-8"></script>
     <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="websocket.js" charset="utf-8"></script>
     <title>mainroom</title>
   </head>
   <body>
+    <button type="button" id="conn">接続</button>
     <form>
     <label for="name">名前を入力して「名前決定ボタン」を押してください</label>
     <input type="text" id="name" name="name" required>
@@ -32,7 +33,7 @@
         <p>Team: <span id="teamText"></span></p>
       </div>
 
-      <button type="button" id="btn" onClick="getValue()">はやおしボタン</button><br>
-    <ul id="innerHTMLtxt"></ul>
+      <button type="button" id="btn">はやおしボタン</button><br>
+    <p id="innerHTMLtxt"></p>
   </body>
 </html>
