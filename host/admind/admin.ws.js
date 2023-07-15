@@ -1,4 +1,5 @@
 function init() {
+  var coment = document.getElementById("innerHTMLtxt");
   //追加部分(WebSocketの部分)
   var ws = new WebSocket('ws://localhost:8888/');
   //var ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
@@ -11,14 +12,14 @@ function init() {
   ws.onmessage = function (e) {
     console.log(e.data);
     if (e.data == "リセットされたよ") {
-      innerHTMLtxt.innerHTML = e.data;
+      coment.innerHTML = e.data;
     } else {
       AUDIO.pause();
-      var aiu = Decode(e);
-      console.log(aiu);
-      innerHTMLtxt.innerHTML = Object.keys(aiu) + "が押しました!!";
+      var userinfo = Decode(e);
+      console.log(userinfo);
+      coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
       var team = document.getElementById("team").value;
-      if (team == aiu.true) {
+      if (team == userinfo.true) {
         btn.disabled = true;
       }
     }

@@ -1,6 +1,6 @@
 function intro(){
+    var coment = document.getElementById("innerHTMLtxt");
     function initConn(){    //接続確認
-        var coment = document.getElementById("innerHTMLtxt");
         var ws;
         try{
             ws = new WebSocket("ws://localhost:8888/")
@@ -56,11 +56,11 @@ function intro(){
 
         ws.onmessage = function (e) {
             if(e.data == "リセットされたよ") {
-                innerHTMLtxt.innerHTML = e.data;
+                coment.innerHTML = e.data;
                 btn.disabled = false;
             }else{
                 var userinfo = Decode(e);
-                innerHTMLtxt.innerHTML = Object.keys(userinfo) + "が押しました!!";
+                coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
                 var team = document.getElementById("team").value;
                 if (Object.keys(userinfo).includes(team)) {
                     btn.disabled = true;
