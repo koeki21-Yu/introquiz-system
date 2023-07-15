@@ -28,7 +28,7 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
   
   ws_conn.onmessage do |message|	# クライアントから文字列が来たとき
     p message
-    if messge == "リセットお願い" then
+    if message == "リセットお願い" then
       hash = Hash.new
       reset ="リセットされたよ"
       pp reset
