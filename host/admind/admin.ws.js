@@ -9,16 +9,15 @@ function intro() {
             //var ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
             ws.onopen = function() {};		// Nothing special
             ws.onerror = function(err) {
-            alert('WebSocket failure: ' + err);
+            coment.innerHTML = "WebSocket failure: " + err;
             };
             //var ws = new WebSocket('wss://www.koeki-prj.org/hayaoshi');
             ws.onopen = function (ev) {
-                alert("接続完了");
-                coment.Context = "接続完了";
+                coment.innerHTML = "接続完了";
                 conn.disabled = true;
             };
             ws.onclose = function(ev){
-                coment.Context = "接続が行われていません。接続ボタンを押してもう一度お試しください";
+              coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
                 conn.disabled = false;
             };
         }catch (err){

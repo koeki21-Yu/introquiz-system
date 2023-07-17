@@ -4,3 +4,117 @@
     padding-bottom: 20px;
     height: 54px;
 }
+
+/* admin.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  button:hover {
+    background-color: #e65247;
+  }
+  
+  form {
+    text-align: center;
+    position: relative;
+  }
+  
+  #conn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="button"] {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #e65247;
+  }
+  
+  #innerHTMLtxt {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+  }
+  
+  #release {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+  
+  #left,
+  #right {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block; /* 横並びにする */
+    border-radius: 50px;
+  }
+  
+  #left {
+    margin-right: 10px; /* ボタンの間隔を調整 */
+  }
+  

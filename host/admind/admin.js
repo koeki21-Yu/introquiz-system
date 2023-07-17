@@ -43,3 +43,23 @@
   }, false);
 })();
 
+//button event function
+
+function changeDisplay1(){
+    var hinto =document.getElementById("__ヒント__");
+    console.log(hinto.style.visibility)
+    if(hinto.style.visibility != "visible"){
+        hinto.style.visibility = "visible"
+    }else{
+        hinto.style.visibility = "hidden"
+    }
+}
+
+function changeDisplay2(){
+    var kotae = document.getElementById("__答え__");
+    if(kotae.style.visibility != "visivle"){
+        kotae.style.visibility = "visible"
+    }else{
+        kotae.style.visibility = "hidden"
+    }
+}
