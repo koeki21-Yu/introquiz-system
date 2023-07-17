@@ -37,10 +37,10 @@ function intro(){
         var teamText = document.getElementById("teamText");
         var name = nameText.textContent;
         var team = teamText.textContent;
-        console.log(name);
-        console.log(team);
-        ws.send(name);
-        ws.send(team);
+        console.log(name + team);
+        //console.log(team);
+        ws.send(name + team);
+        //ws.send(team);
     }
     btn.addEventListener("mousedown" , getValue,false);
 

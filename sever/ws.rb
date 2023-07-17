@@ -12,7 +12,7 @@ require 'json'
 require 'set'
 
 PORT = 8888
-connnections = []
+connections = []
 hash = {}
 
 clients = Set.new	# 「集合」クラス
@@ -21,9 +21,9 @@ print("No clients yet...")
 EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
   # クライアント接続がある度にその情報が ws_conn に入って来る
   ws_conn.onopen do		# そのクライアントが接続開始してきたとき
-    clients << ws_conn		# クライアントを集合に追加
+    connections << ws_conn		# クライアントを集合に追加
     ws_conn.send("うっす!")
-    printf("%d guest(s)\n", clients.length)
+    printf("%d guest(s)\n", connections.length)
   end
   
   ws_conn.onmessage do |message|	# クライアントから文字列が来たとき
@@ -32,12 +32,12 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       hash = Hash.new
       reset ="リセットされたよ"
       pp reset
-      connnections.each{|conn| conn.send{reset}}
+      connections.each{|conn| conn.send(reset)}
     else
-      hash[massage] = true
-      str - JSON.genrate(hash)
+      hash[message] = true
+      str = JSON.generate(hash)
       pp str
-      connnections.each{|conn| conn.send{str}}
+      connections.each{|conn| conn.send(str)}
     end
   end
 end

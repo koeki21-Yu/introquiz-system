@@ -1,5 +1,6 @@
 function init() {
-  var coment = document.getElementById("innerHTMLtxt");
+  var coment = document.getElementById("innerHTMLtxt"),
+      AUDIO = document.getElementById("__音楽__");
   //追加部分(WebSocketの部分)
   var ws = new WebSocket('ws://localhost:8888/');
   //var ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
