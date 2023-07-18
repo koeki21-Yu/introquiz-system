@@ -3,7 +3,7 @@ function intro(){
     var ws;
     function initConn(){    //接続確認
         try{
-            ws = new WebSocket("ws://localhost:8888/")
+            //ws = new WebSocket("ws://localhost:8888/")
             ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi/");
             ws.onopen = function() {};		// Nothing special
             ws.onerror = function(err) {
@@ -62,6 +62,8 @@ function intro(){
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
                 var team = document.getElementById("team").value;
+                cnsole.log(team)
+                const re = new RegExp(team)
                 if (Object.keys(userinfo).includes(team)) {
                     btn.disabled = true;
                 }
