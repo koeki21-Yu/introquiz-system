@@ -37,9 +37,9 @@ function intro(){
         var teamText = document.getElementById("teamText");
         var name = nameText.textContent;
         var team = teamText.textContent;
-        console.log(name + team);
+        console.log(team + name);
         //console.log(team);
-        ws.send(name + team);
+        ws.send(team + name);
         //ws.send(team);
     }
     btn.addEventListener("mousedown" , getValue,false);
@@ -61,10 +61,14 @@ function intro(){
             }else{
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
-                var team = document.getElementById("team").value;
-                cnsole.log(team)
-                const re = new RegExp(team)
-                if (Object.keys(userinfo).includes(team)) {
+                var teamText = document.getElementById("teamText");
+                var team = teamText.textContent;
+                //var team = document.getElementById("team").value;
+                console.log(team)
+                const re = new RegExp(team + "*")
+                console.log(re)
+                
+                if (re.test(Object.keys(userinfo))) {
                     btn.disabled = true;
                 }
             }
