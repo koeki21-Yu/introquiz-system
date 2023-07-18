@@ -1,6 +1,8 @@
 function intro(){
     var coment = document.getElementById("innerHTMLtxt");
     var ws;
+    var btn = document.getElementById("btn");
+    btn.disabled = true; //早押しボタンを使えない状態で始める。押すためにはadmin.htmlでリセットボタンを押す。
     function initConn(){    //接続確認
         try{
             //ws = new WebSocket("ws://localhost:8888/")
@@ -31,7 +33,6 @@ function intro(){
     
     //document.getElementById("team").value = document.getElementById("dat_in").value;
     
-    var btn = document.getElementById("btn");
     function getValue() {
         var nameText = document.getElementById("nameText");
         var teamText = document.getElementById("teamText");
@@ -67,7 +68,6 @@ function intro(){
                 console.log(team)
                 const re = new RegExp(team + "*")
                 console.log(re)
-                
                 if (re.test(Object.keys(userinfo))) {
                     btn.disabled = true;
                 }
