@@ -2,7 +2,7 @@
   var quiz = [],	// 読み取ったCSV全てが入る配列
       nQuiz,		// データの個数(quiz.lengthのまま使ってもよい)
       pos=0;		// 現在の配列の添字位置
-  var csvfile = "quiz.csv";	// CSVデータファイル名
+  var csvfile = "quiz/quiz.csv";	// CSVデータファイル名
   function putValues(row) {
       // CSVの1行分のJSONがrowに入る
       for (let key of Object.keys(row)) {
@@ -43,6 +43,9 @@
   }, false);
 })();
 
+function done(){
+    
+}
 //button event function
 
 function changeDisplay1(){
