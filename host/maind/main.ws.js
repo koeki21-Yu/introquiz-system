@@ -1,3 +1,4 @@
+(() => {
 function intro(){
     var coment = document.getElementById("innerHTMLtxt");
     var ws;
@@ -76,3 +77,4 @@ function intro(){
     };
 }
 document.addEventListener("DOMContentLoaded", intro, false);
+})();

@@ -24,11 +24,8 @@ function intro() {
             alert("Socket Creation Error" + err);
         }
     };
-    function con(ev){   //接続ボタンを押した時に接続確認
-            initConn();
-    }
     var conn = document.getElementById("conn");
-    conn.addEventListener("mousedown" ,con,false);
+    conn.addEventListener("mousedown" ,initConn,false);
     initConn(); //最初に接続確認
   
   function Decode(value) {
@@ -56,6 +53,7 @@ function intro() {
   release.addEventListener("click", () => {
     ws.send("リセットお願い");
   });
+  
 }
 
 document.addEventListener("DOMContentLoaded", intro, false);
