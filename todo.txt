@@ -27,3 +27,29 @@
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>カンマ区切りの先頭を取るシステム</title>
+</head>
+<body>
+  <input type="text" id="inputText" placeholder="カンマ区切りの文字列を入力">
+  <button onclick="getFirstElement()">先頭を取得</button>
+  <p id="result"></p>
+
+  <script>
+    function getFirstElement() {
+      const inputText = document.getElementById("inputText").value.trim();
+      
+      if (inputText === "") {
+        document.getElementById("result").innerText = "文字列を入力してください。";
+        return;
+      }
+
+      const elements = inputText.split(",");
+      const firstElement = elements[0].trim();
+      document.getElementById("result").innerText = "先頭の要素: " + firstElement;
+    }
+  </script>
+</body>
+</html>
