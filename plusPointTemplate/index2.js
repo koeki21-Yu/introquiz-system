@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     faster.innerHTML = usrinfo;
     let trueButton = document.getElementById("true");
     let falseButton = document.getElementById("false");
+
+    
     falseButton.addEventListener("mousedown", function () {
         console.log("わあ、間違えた");
         usrinfo.shift();

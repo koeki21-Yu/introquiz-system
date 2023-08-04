@@ -25,8 +25,6 @@
         <button type="button" onclick="stopMusic()">Stop</button>
     </div>
 
-
-
     <p id="__ヒント__" class="hidden">ヒント書く場所</p>
     <input type="button" value="ヒントの表示/非表示を切替える" onclick="changeDisplay1();"/><br><br>
 
@@ -40,21 +38,19 @@
         <button type="button" id="left">前の問題</button>
         <button type="button" id="right">次の問題</button>
     </div>
-    <select name="select csv" id="csv">
-        <option value="1">komatsu.csv</option>
-        <option value="2">quiz.csv</option>
-    </select>
-    <button type="button" id="done">決定</button>
+    <form>
+        <button type="button" id="true">正解！</button>
+        <button type="button" id="false">不正解！</button>
+    </form>
+    
     <br>
     <h1>点数</h1>
-    <ol>
-        <li id="1位"></li>
-        <li id="2位"></li>
-        <li id="3位"></li>
-        <li id="4位"></li>
-        <li id="5位"></li>
-        <li id="6位"></li>
-    </ol>
+    <p>1班<span id="team1"></span></p>
+    <p>2班<span id="team2"></span></p>
+    <p>3班<span id="team3"></span></p>
+    <p>4班<span id="team4"></span></p>
+    <p>5班<span id="team5"></span></p>
+    <p>6班<span id="team6"></span></p>
     
 </body>
 </html>
