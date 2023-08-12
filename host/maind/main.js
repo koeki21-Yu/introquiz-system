@@ -1,7 +1,5 @@
 (() => {
-    var nm = document.getElementById("nameBtn"),
-    tm = document.getElementById("teamBtn");
-    nm.addEventListener("mousedown" ,updateName,false);
+    
     function updateName() {
     var nameInput = document.getElementById("name");
     var name = nameInput.value;
@@ -21,7 +19,12 @@
 
         
     }
-
+    var nm = document.getElementById("nameBtn"),
+    tm = document.getElementById("teamBtn");
+    nm.addEventListener("mousedown" ,()=>{
+        updateName();
+    },false);
+    tm.addEventListener("mousedown" ,()=>{
+        updateTeam();
+    },false);
 })();
-
-document.addEventListener("DOMContentLoaded", ()=>{},false);
