@@ -43,11 +43,6 @@
   }, false);
 })();
 
-function done(){
-    
-}
-//button event function
-
 function changeDisplay1(){
     var hinto =document.getElementById("__ヒント__");
     console.log(hinto.style.visibility)
