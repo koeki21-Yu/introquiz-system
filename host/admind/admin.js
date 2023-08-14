@@ -63,6 +63,8 @@ function changeDisplay2(){
 }
 
 var innerHTMLtxt = document.getElementById("innerHTMLtxt");
+document.addEventListener("DOMContentLoaded",tureorfalse,false);
+function tureorfalse(){
 function calluserinfo(usrinfo){
     let userinfo;
     userinfo = innerHTMLtxt.textContent;
@@ -132,3 +134,4 @@ trueButton.addEventListener("mousedown", function () {
         break;
     }
   });
+}
