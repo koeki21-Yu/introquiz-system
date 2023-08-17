@@ -4,6 +4,7 @@ function intro(){
     var ws;
     var btn = document.getElementById("btn");
     btn.disabled = true; //早押しボタンを使えない状態で始める。押すためにはadmin.htmlでリセットボタンを押す。
+    btn.style.backgroundColor = "#5a5a5a"
     function initConn(){    //接続確認
         try{
             //ws = new WebSocket("ws://localhost:8888/")
@@ -62,7 +63,7 @@ function intro(){
             if(e.data == "リセットされたよ") {
                 coment.innerHTML = e.data;
                 btn.disabled = false;
-                conn.style.backgroundColor = "#ff0000"
+                btn.style.backgroundColor = "#ff0000"
             }else{
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
@@ -74,7 +75,7 @@ function intro(){
                 console.log(re)
                 if (re.test(Object.keys(userinfo))) {
                     btn.disabled = true;
-                    conn.style.backgroundColor = "#5a5a5a"
+                    btn.style.backgroundColor = "#5a5a5a"
                 }
             }
         };
