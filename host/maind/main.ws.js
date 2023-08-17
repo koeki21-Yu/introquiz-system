@@ -64,6 +64,10 @@ function intro(){
                 coment.innerHTML = e.data;
                 btn.disabled = false;
                 btn.style.backgroundColor = "#ff0000"
+            }else if (e.data == "サーバーがリセットされました。"){
+                coment.innerHTML = e.data;
+                console.log("サーバーリセット");
+                btn..disabled = true;
             }else{
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
