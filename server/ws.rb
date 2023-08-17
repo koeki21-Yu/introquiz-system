@@ -27,8 +27,8 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       # main.html からの接続で、admin.html が接続していない場合は接続を拒否
       unless admin_connected
         ws_conn.close_connection
-        next
-      end
+      next
+    end
     connections << ws_conn		# クライアントを集合に追加
     ws_conn.send("うっす!")
     printf("%d guest(s)\n", connections.length)
