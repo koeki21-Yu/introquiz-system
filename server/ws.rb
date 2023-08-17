@@ -36,7 +36,8 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
     elsif message == "admin_opened"
       admin_pages +=1
       if admin_pages == 2 then
-        puts "Admin page opened, closing all clients..."
+        pp "Admin page opened"
+        pp "closing all clients..."
         connections.each do |client|
           client.close unless client == ws_conn # 自分以外のクライアントをクローズ
         end
