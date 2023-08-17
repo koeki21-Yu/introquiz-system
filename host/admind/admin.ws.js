@@ -15,11 +15,27 @@ function intro() {
             ws.onopen = function (ev) {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
-    
+                ws.send("admin_opened");
             };
             ws.onclose = function(ev){
               coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
                 conn.disabled = false;
+            };
+            ws.onmessage = function (e) {
+              console.log(e.data);
+              if (e.data == "リセットされたよ") {
+                coment.innerHTML = e.data;
+                console.log("リセットしたよ");
+              } else {
+                AUDIO.pause();
+                var userinfo = JSON.parse(value.data);
+                console.log(userinfo);
+                coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
+                var team = document.getElementById("team").value;
+                if (team == userinfo.true) {
+                  btn.disabled = true;
+                }
+              }
             };
         }catch (err){
             alert("Socket Creation Error" + err);
@@ -40,22 +56,7 @@ function intro() {
     var obj2 = JSON.parse(value.data);
     return obj2;
   }
-  ws.onmessage = function (e) {
-    console.log(e.data);
-    if (e.data == "リセットされたよ") {
-      coment.innerHTML = e.data;
-      console.log("リセットしたよ");
-    } else {
-      AUDIO.pause();
-      var userinfo = Decode(e);
-      console.log(userinfo);
-      coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
-      var team = document.getElementById("team").value;
-      if (team == userinfo.true) {
-        btn.disabled = true;
-      }
-    }
-  };
+  
   
 }
 
