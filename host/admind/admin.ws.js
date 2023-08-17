@@ -15,8 +15,7 @@ function intro() {
             ws.onopen = function (ev) {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
-                ws.send('admin_opened');
-                
+    
             };
             ws.onclose = function(ev){
               coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
@@ -35,6 +34,11 @@ function intro() {
     var obj2 = JSON.parse(value.data);
     return obj2;
   }
+  var release = document.getElementById("release");
+  release.addEventListener("click", () => {
+    console.log("リセットボタンを押したしたよ");
+    ws.send("リセットお願い");
+  });
   ws.onmessage = function (e) {
     console.log(e.data);
     if (e.data == "リセットされたよ") {
@@ -51,11 +55,7 @@ function intro() {
       }
     }
   };
-  var release = document.getElementById("release");
-  release.addEventListener("click", () => {
-    console.log("リセットボタンを押したしたよ");
-    ws.send("リセットお願い");
-  });
+  
 }
 
 document.addEventListener("DOMContentLoaded", intro, false);
