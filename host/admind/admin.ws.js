@@ -26,6 +26,9 @@ function intro() {
               if (e.data == "リセットされたよ") {
                 coment.innerHTML = e.data;
                 console.log("リセットしたよ");
+              }else if (e.data == "サーバーがリセットされました。"){
+                coment.innerHTML = e.data;
+                conn.disabled = false;
               } else {
                 AUDIO.pause();
                 var userinfo = JSON.parse(e.data);
