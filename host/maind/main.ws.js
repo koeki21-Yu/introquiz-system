@@ -62,6 +62,7 @@ function intro(){
             if(e.data == "リセットされたよ") {
                 coment.innerHTML = e.data;
                 btn.disabled = false;
+                conn.style.backgroundColor = "#ff0000"
             }else{
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
@@ -73,6 +74,7 @@ function intro(){
                 console.log(re)
                 if (re.test(Object.keys(userinfo))) {
                     btn.disabled = true;
+                    conn.style.backgroundColor = "#5a5a5a"
                 }
             }
         };
