@@ -16,6 +16,7 @@ function intro(){
             ws.onopen = function (ev) {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
+                conn.style.backgroundColor = "#00aaff"
             };
             ws.onclose = function(ev){
                 coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください";
