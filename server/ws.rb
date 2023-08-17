@@ -40,9 +40,9 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
         connections.each do |client|
           client.close unless client == ws_conn # 自分以外のクライアントをクローズ
         end
+        connections.clear
         admin_pages = 0
       end
-      connections.clear
     else
       hash[message] = true
       str = JSON.generate(hash)
