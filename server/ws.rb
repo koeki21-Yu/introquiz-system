@@ -41,7 +41,6 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
           client.close unless client == ws_conn # 自分以外のクライアントをクローズ
         end
         admin_pages = 0
-        connections.clear
       end
     else
       hash[message] = true
