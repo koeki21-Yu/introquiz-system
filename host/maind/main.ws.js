@@ -20,6 +20,7 @@ function intro(){
             ws.onclose = function(ev){
                 coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください";
                 conn.disabled = false;
+                conn.style.backgroundColor = "#ff0000";
             };
         }catch (err){
             alert("Socket Creation Error" + err);
