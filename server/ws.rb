@@ -14,7 +14,7 @@ require 'set'
 PORT = 8804
 connections = []
 hash = {}
-
+admin_pages = 0
 clients = Set.new	# 「集合」クラス
 
 print("No clients yet...")
@@ -34,11 +34,15 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       pp reset
       connections.each{|conn| conn.send(reset)}
     elsif message == "admin_opened"
-      puts "Admin page opened, closing all clients..."
-      connections.each do |client|
-        client.close
+      admin_pages +=1
+      if admin == 2 then
+        puts "Admin page opened, closing all clients..."
+        connections.each do |client|
+          client.close
+        end
+        admin_pages = 0
+        connections.clear
       end
-      connections.clear
     else
       hash[message] = true
       str = JSON.generate(hash)
