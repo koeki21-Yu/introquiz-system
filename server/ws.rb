@@ -45,9 +45,9 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
         connections.clear
         admin_pages = 0
         hash = Hash.new
-        reset ="サーバーがリセットされました。"
-        pp reset
-        connections.each{|conn| conn.send(reset)}
+        server ="サーバーがリセットされました。"
+        pp server
+        connections.each{|conn| conn.send(server)}
       end
     else
       hash[message] = true
