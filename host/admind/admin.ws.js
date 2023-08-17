@@ -15,6 +15,7 @@ function intro() {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
                 ws.send('admin_opened');
+                console.log(ws.readyState)
             };
             ws.onclose = function(ev){
               coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
