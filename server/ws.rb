@@ -46,8 +46,8 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       connections.each{|conn| conn.send(str)}
     end
   end
-  ws.onclose do
+  ws_conn.onclose do
     puts "Client disconnected"
-    connections.delete(ws)
+    connections.delete(ws_conn)
   end
 end
