@@ -21,6 +21,14 @@ print("No clients yet...")
 EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
   # クライアント接続がある度にその情報が ws_conn に入って来る
   ws_conn.onopen do		# そのクライアントが接続開始してきたとき
+    if ws_conn.request["path"] == "/admin"  # admin.html からの接続の場合
+      admin_connected = true  # admin.html が接続したらフラグを true に設定
+    else
+      # main.html からの接続で、admin.html が接続していない場合は接続を拒否
+      unless admin_connected
+        ws_conn.close_connection
+        next
+      end
     connections << ws_conn		# クライアントを集合に追加
     ws_conn.send("うっす!")
     printf("%d guest(s)\n", connections.length)
