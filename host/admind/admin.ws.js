@@ -39,6 +39,7 @@ function intro() {
     console.log(e.data);
     if (e.data == "リセットされたよ") {
       coment.innerHTML = e.data;
+      console.log("リセットしたよ");
     } else {
       AUDIO.pause();
       var userinfo = Decode(e);
@@ -52,7 +53,7 @@ function intro() {
   };
   var release = document.getElementById("release");
   release.addEventListener("click", () => {
-    console.log("リセットしたよ");
+    console.log("リセットボタンを押したしたよ");
     ws.send("リセットお願い");
   });
 }
