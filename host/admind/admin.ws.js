@@ -9,13 +9,14 @@ function intro() {
             ws.onopen = function() {};		// Nothing special
             ws.onerror = function(err) {
             coment.innerHTML = "WebSocket failure: " + err;
+            
             };
             //var ws = new WebSocket('wss://www.koeki-prj.org/hayaoshi');
             ws.onopen = function (ev) {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
                 ws.send('admin_opened');
-                console.log(ws.readyState)
+                
             };
             ws.onclose = function(ev){
               coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
@@ -51,9 +52,9 @@ function intro() {
   };
   var release = document.getElementById("release");
   release.addEventListener("click", () => {
+    console.log("リセットしたよ");
     ws.send("リセットお願い");
   });
-  
 }
 
 document.addEventListener("DOMContentLoaded", intro, false);
