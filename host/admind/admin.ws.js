@@ -28,6 +28,7 @@ function intro() {
                 console.log("リセットしたよ");
               }else if (e.data == "サーバーがリセットされました。"){
                 coment.innerHTML = e.data;
+                console.log("サーバーリセット");
                 conn.disabled = false;
               } else {
                 AUDIO.pause();
