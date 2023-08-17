@@ -39,15 +39,15 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       if admin_pages == 2 then
         pp "Admin page opened"
         pp "closing all clients..."
-        connections.each do |client|
-          client.close unless client == ws_conn # 自分以外のクライアントをクローズ
-        end
-        connections.clear
         admin_pages = 0
         hash = Hash.new
         server ="サーバーがリセットされました。"
         pp server
         connections.each{|conn| conn.send(server)}
+        connections.each do |client|
+          client.close unless client == ws_conn # 自分以外のクライアントをクローズ
+        end
+        connections.clear
       end
     else
       hash[message] = true
