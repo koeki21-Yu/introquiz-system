@@ -28,11 +28,11 @@ function intro() {
                 console.log("リセットしたよ");
               } else {
                 AUDIO.pause();
-                var userinfo = JSON.parse(value.data);
+                var userinfo = JSON.parse(e.data);
                 console.log(userinfo);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
                 var team = document.getElementById("team").value;
-                if (team == userinfo.true) {
+                if (team === userinfo.true) {
                   btn.disabled = true;
                 }
               }
