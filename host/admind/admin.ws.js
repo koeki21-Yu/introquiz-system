@@ -33,30 +33,30 @@ function intro() {
       console.log("リセットボタンを押したしたよ");
       ws.send("リセットお願い");
     });
-  window.onload = function () {
-    function Decode(value) {
-      //JSON ⇒ オブジェクト
-      //エンコードされたデータを元の形式へ戻す。（デコード）
-      var obj2 = JSON.parse(value.data);
-      return obj2;
-    }
-    ws.onmessage = function (e) {
-      console.log(e.data);
-      if (e.data == "リセットされたよ") {
-        coment.innerHTML = e.data;
-        console.log("リセットしたよ");
-      } else {
-        AUDIO.pause();
-        var userinfo = Decode(e);
-        console.log(userinfo);
-        coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
-        var team = document.getElementById("team").value;
-        if (team == userinfo.true) {
-          btn.disabled = true;
-        }
+
+  function Decode(value) {
+    //JSON ⇒ オブジェクト
+    //エンコードされたデータを元の形式へ戻す。（デコード）
+    var obj2 = JSON.parse(value.data);
+    return obj2;
+  }
+  ws.onmessage = function (e) {
+    console.log(e.data);
+    if (e.data == "リセットされたよ") {
+      coment.innerHTML = e.data;
+      console.log("リセットしたよ");
+    } else {
+      AUDIO.pause();
+      var userinfo = Decode(e);
+      console.log(userinfo);
+      coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
+      var team = document.getElementById("team").value;
+      if (team == userinfo.true) {
+        btn.disabled = true;
       }
-    };
+    }
   };
+  
 }
 
 document.addEventListener("DOMContentLoaded", intro, false);

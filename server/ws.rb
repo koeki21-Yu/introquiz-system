@@ -38,10 +38,11 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       if admin_pages == 2 then
         puts "Admin page opened, closing all clients..."
         connections.each do |client|
-          client.close unless client == ws_conn # 自分以外のクライアントをクローズ
+          client.close
         end
         admin_pages = 0
       end
+      connections.clear
     else
       hash[message] = true
       str = JSON.generate(hash)
