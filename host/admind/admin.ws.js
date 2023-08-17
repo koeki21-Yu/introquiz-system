@@ -2,13 +2,12 @@ function intro() {
   var coment = document.getElementById("innerHTMLtxt"),
       AUDIO = document.getElementById("__音楽__"),
       ws;
-
+      ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
+      ws.send('admin_opened');
       function initConn(){    //接続確認
         try{
             //ws = new WebSocket("wss://localhost:8804/")
-            ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
             ws.onopen = function() {};		// Nothing special
-            ws.send('admin_opened');
             ws.onerror = function(err) {
             coment.innerHTML = "WebSocket failure: " + err;
             };
