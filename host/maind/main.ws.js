@@ -67,7 +67,7 @@ function intro(){
             }else if (e.data == "サーバーがリセットされました。"){
                 coment.innerHTML = e.data;
                 console.log("サーバーリセット");
-                btn..disabled = true;
+                btn.disabled = true;
             }else{
                 var userinfo = Decode(e);
                 coment.innerHTML = Object.keys(userinfo) + "が押しました!!";
