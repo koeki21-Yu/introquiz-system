@@ -8,6 +8,7 @@ function intro() {
             //ws = new WebSocket("wss://localhost:8804/")
             ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
             ws.onopen = function() {};		// Nothing special
+            ws.send('admin_opened');
             ws.onerror = function(err) {
             coment.innerHTML = "WebSocket failure: " + err;
             };
@@ -15,7 +16,6 @@ function intro() {
             ws.onopen = function (ev) {
                 coment.innerHTML = "接続完了";
                 conn.disabled = true;
-                ws.send('admin_opened');
             };
             ws.onclose = function(ev){
               coment.innerHTML = "接続が行われていません。接続ボタンを押してもう一度お試しください。";
