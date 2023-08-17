@@ -23,6 +23,10 @@
   function slide(n) {	// nで指定した数だけ現在位置(pos)をずらす
       pos = (nQuiz+pos+n) % nQuiz;	// 0以上 nQUIZ以下 になるよう調整
       putValues(quiz[pos]);		// ずらした添字位置で文書書き換え
+      let kotae = document.getElementById("__答え__");
+      let hinto = document.getElementById("__ヒント__");
+      kotae.style.visibility = "hidden";
+      hinto.style.visibility = "hidden";
   }
   function left() {slide(-1);}	// 1つ前に戻るボタンの処理
   function right() {slide(1);}	// 1つ先に進むボタンの処理
@@ -43,24 +47,28 @@
   }, false);
 })();
 
+
 function changeDisplay1(){
-    var hinto =document.getElementById("__ヒント__");
-    console.log(hinto.style.visibility)
-    if(hinto.style.visibility != "visible"){
-        hinto.style.visibility = "visible"
-    }else{
-        hinto.style.visibility = "hidden"
+    let hinto = document.getElementById("__ヒント__");
+    console.log(hinto.style.visibility);
+    if (hinto.style.visibility !== "visible") {
+        hinto.style.visibility = "visible";
+    } else {
+        hinto.style.visibility = "hidden";
     }
 }
 
 function changeDisplay2(){
-    var kotae = document.getElementById("__答え__");
-    if(kotae.style.visibility != "visivle"){
-        kotae.style.visibility = "visible"
-    }else{
-        kotae.style.visibility = "hidden"
+    let kotae = document.getElementById("__答え__");
+    if (kotae) {
+        if (kotae.style.visibility !== "visible") {
+            kotae.style.visibility = "visible";
+        } else {
+            kotae.style.visibility = "hidden";
+        }
     }
 }
+
 
 var innerHTMLtxt = document.getElementById("innerHTMLtxt");
 document.addEventListener("DOMContentLoaded",tureorfalse,false);

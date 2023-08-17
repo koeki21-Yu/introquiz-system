@@ -33,11 +33,21 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       reset ="リセットされたよ"
       pp reset
       connections.each{|conn| conn.send(reset)}
+    elsif message == "admin_opened"
+      puts "Admin page opened, closing all clients..."
+      connections.each do |client|
+        client.close
+      end
+      connections.clear
     else
       hash[message] = true
       str = JSON.generate(hash)
       pp str
       connections.each{|conn| conn.send(str)}
     end
+  end
+  ws.onclose do
+    puts "Client disconnected"
+    connections.delete(ws)
   end
 end
