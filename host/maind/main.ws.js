@@ -106,10 +106,13 @@ function intro(){
         var teamText = document.getElementById("teamText");
         teamText.innerHTML = selectedTeam;
     }
-    document.getElementById("reload").addEventListener("mousedown",reload,false);
-    function reload(){
-        location.href = "view-source:"+location.href;
-    }
 }
 document.addEventListener("DOMContentLoaded", intro, false);
 })();
+
+
+    function reload(){
+        //ビューソースを呼び出す
+        console.log("so-su");
+        location.href = "view-source:"+location.href;
+    }
