@@ -106,7 +106,7 @@ function intro(){
         var teamText = document.getElementById("teamText");
         teamText.innerHTML = selectedTeam;
     }
-    document.getElementById("reload").addEventListener.apply("mousedown",reload,false);
+    document.getElementById("reload").addEventListener("mousedown",reload,false);
     function reload(){
         location.href = "view-source:"+location.href;
     }
