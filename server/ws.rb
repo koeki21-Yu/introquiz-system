@@ -33,6 +33,7 @@ EM::WebSocket.start({:host => "0.0.0.0", :port => PORT}) do |ws_conn|
       hash = Hash.new
       reset ="リセットされたよ"
       pp reset
+      pp connections.length
       connections.each{|conn| conn.send(reset)}
     # elsif message == "admin_opened"
     #   admin_pages +=1
