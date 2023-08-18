@@ -114,5 +114,5 @@ document.addEventListener("DOMContentLoaded", intro, false);
     function reload(){
         //ビューソースを呼び出す
         console.log("so-su");
-        location.href = "view-source:"+location.href;
+        window.location.reload(true);
     }
