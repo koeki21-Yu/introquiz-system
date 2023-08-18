@@ -64,6 +64,7 @@ function intro(){
                 coment.innerHTML = e.data;
                 btn.disabled = false;
                 btn.style.backgroundColor = "#ff0000"
+                console.log("リセットされたよ")
             }else if (e.data == "サーバーがリセットされました。"){
                 coment.innerHTML = e.data;
                 console.log("サーバーリセット");
