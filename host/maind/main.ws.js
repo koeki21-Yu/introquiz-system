@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", intro, false);
 
 
     function reload(){
-        //ビューソースを呼び出す
-        console.log("so-su");
+        //強制リロード
+        console.log("強制リロード");
         window.location.reload(true);
     }
