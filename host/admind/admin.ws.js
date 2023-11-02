@@ -5,7 +5,7 @@ function intro() {
       function initConn(){    //接続確認
         try{
             //ws = new WebSocket("wss://localhost:8804/")
-            ws = new WebSocket("wss://www.koeki-prj.org/hayaoshi");
+            ws = new WebSocket("ip:port");
             ws.onopen = function() {};		// Nothing special
             ws.onerror = function(err) {
             coment.innerHTML = "WebSocket failure: " + err;
