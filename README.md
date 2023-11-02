@@ -17,14 +17,14 @@ admin.ws.jsおよびmain.ws.jsのシステムのws = new WebSocket("wss:ip:port"
 
 ## webpage
 ### admindirectory
-アドミンページ-gamehostが開くページになります。
+アドミンページ-ホストが開くページになります。
 
 [admin.html](../../../introquiz-system/blob/master/host/admind/admin.html)
 
 ---
 
 ### maindirectory
-メインページ-gamegestが開くページとなります。
+メインページ-ゲストが開くページとなります。
 
 [main.html](../../../introquiz-system/blob/master/host/maind/main.html)
 
