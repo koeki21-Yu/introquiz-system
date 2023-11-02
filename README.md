@@ -4,9 +4,12 @@
 イントロクイズ作成リポジトリです。
 
 このリポジトリーをgitcloneによりダウンロードすることにより、使用することができます。
-**サーバー側では、ポートの開放およびサーバシステムをの起動する必要があります。
-**admin.ws.jsおよびmain.ws.jsのシステムのws = new WebSocket("IP:port");におけるipとportを起動しているサーバーに合わせる必要があります。
-**admin.jsにおける5行目のquiz/quiz.csvを編集し自分の使用したい音楽データに変換する必要があります。
+
+サーバー側では、ポートの開放およびサーバシステムをの起動する必要があります。
+
+admin.ws.jsおよびmain.ws.jsのシステムのws = new WebSocket("IP:port");におけるipとportを起動しているサーバーに合わせる必要があります。
+
+admin.jsにおける5行目のquiz/quiz.csvを編集し自分の使用したい音楽データに変換する必要があります。
 
 ## webpage
 ### admindirectory
