@@ -1,14 +1,16 @@
-2023-intro
+2023-introquiz-system
 ===============
 
-2023年のイントロクイズ作成リポジトリです。
+イントロクイズ作成リポジトリです。
 
-これを参考に作成しました。
-[広瀬先生のWebSoketSample](https://www.yatex.org/gitbucket/yuuji/WebSocketSample)
+このリポジトリーをgitcloneによりダウンロードすることにより、使用することができます。
+**サーバー側では、ポートの開放およびサーバシステムをの起動する必要があります。
+**admin.ws.jsおよびmain.ws.jsのシステムのws = new WebSocket("IP:port");におけるipとportを起動しているサーバーに合わせる必要があります。
+**admin.jsにおける5行目のquiz/quiz.csvを編集し自分の使用したい音楽データに変換する必要があります。
 
-[去年のイントロシステム](https://www.yatex.org/gitbucket/c1200274/tokko)
 ## webpage
 ### admindirectory
+アドミンページ
 [admin.html](../../../2023-intro/pages/host/admind/admin.html)
 
 
