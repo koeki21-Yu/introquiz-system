@@ -11,7 +11,7 @@
 
 admin.ws.jsおよびmain.ws.jsのシステムのws = new WebSocket("wss:ip:port");におけるipとportを起動しているサーバーに合わせる必要があります。
 
-admin.jsにおける5行目のquiz/quiz.csvを編集し自分の使用したい音楽データに変換する必要があります。
+/quiz.csvを編集し自分の使用したい音楽データに変換する必要があります。
 
 ---
 
